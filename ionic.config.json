@@ -1,0 +1,7 @@
+{
+  "name": "ionic-coinmarketcap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
