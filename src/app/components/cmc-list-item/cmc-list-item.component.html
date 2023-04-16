@@ -1,0 +1,42 @@
+
+    <!-- <ion-card-subtitle>Price</ion-card-subtitle> -->
+
+
+
+<ion-item button lines="full" detail="false">
+    <!-- <ion-badge slot="start" color="none">#{{ coin.cmc_rank }}</ion-badge> -->
+
+    <ion-avatar slot="start">
+        <ion-img [src]="logoLink(coin.listing.id)"></ion-img>
+    </ion-avatar>
+
+    <ion-label slot="" class="ion-text-wrap">
+        
+        <ion-card-subtitle>
+
+            {{ coin.listing.symbol }}
+            <!-- <ion-text [color]="priceColor(coin.listing.quote.EUR.percent_change_24h)">
+                {{ coin.listing.quote.EUR.percent_change_24h | number:'0.2-2' }}%
+            </ion-text> -->
+            
+        </ion-card-subtitle>
+
+        <ion-text>
+            <ion-card-title>{{ coin.listing.name }}</ion-card-title>
+        </ion-text>
+        <ion-text [color]="priceColor(coin.listing.quote.EUR.percent_change_24h)">
+            <h2> {{ coin.listing.quote.EUR.price | currency:'€' }}</h2>
+        </ion-text>
+
+    </ion-label>
+    <ion-label slot="end">
+        <ion-card-subtitle>Marketcap</ion-card-subtitle>
+        {{ coin.listing.quote.EUR.market_cap / 1000000000 | currency:'€' }}B
+    </ion-label>
+
+
+
+
+
+</ion-item>
+
