@@ -36,5 +36,7 @@ export class HomePage {
 
 
 
-
+  priceColor(price: number): string {
+    return price > 0 ? 'success' : 'danger';
+  }
 }

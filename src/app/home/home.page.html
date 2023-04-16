@@ -16,9 +16,9 @@
     </ion-header>
 
     <ng-container *ngIf="data.dataLoaded; else spinner">
-        
+        <ion-list>
             <app-cmc-list-item *ngFor="let coin of data.listData" [coin]="coin"></app-cmc-list-item>
-       
+        </ion-list>
     </ng-container>
     <ng-template #spinner>
         <ion-spinner></ion-spinner>

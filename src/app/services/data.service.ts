@@ -21,7 +21,7 @@ export class DataService {
 
     private http: HttpClient = inject(HttpClient);
     private cmcBaseUrl: string = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/';
-    private cmcApiKey = '';
+    private cmcApiKey = '&CMC_PRO_API_KEY=3bcf4e2f-891b-4afe-8f7c-eed05516919f';
 
     private limit: number = 100;
     public dataLoaded: boolean = false;
